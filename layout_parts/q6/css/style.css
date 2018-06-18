@@ -1,42 +1,64 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
-
-
-.contents {
-  width: 100%;
-  background: #eee;
-  padding: 20px;
-  display: table;
-  margin-bottom: 50px;
-  margin: 0 auto;
-}
-.cell {
-  display: table-cell;
-  height: 50px;
+.q6-1__left {
   text-align: center;
+}
+.q6-1__left p {
+  width: 90px;
+  display: inline-block;
+  padding: 10px 0;
+  background: #e6f2ff;
+}
+.q6-1__right {
+  padding: 10px;
+  margin: 0 auto;
+  background: #e6f2ff;
+  width: 90px;
+  text-align: center;
+}
+.is-table {
+  display: table;
+}
+.is-table-cell {
+  display: table-cell;
   vertical-align: middle;
+  text-align: center;
 }
-.top__left {
-  width: 100px;
-  background: #fdc8c8;
+.is-table-cell p {
+  display: inline-block;
+  background: #fff;
+  padding: 10px;
+  border-radius: 5px;
 }
-.top__middle {
-  background: #e0abd9;
+.is-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.top__right {
-  width: 100px;
-  background: #b6d8ed;
+.is-flex p {
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
 }
-.bottom__left {
-  width: 100px;
-  background: #e5d32e;
+.is-stable {
+  position: relative;
 }
-.bottom__middle {
-  background: #ec8f9a;
+.is-stable p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
-.bottom__right {
-  width: 500px;
-  background: #8fdcad;
+.is-flexible {
+  position: relative;
+}
+.is-flexible p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 /* 回答はここに書いてね */

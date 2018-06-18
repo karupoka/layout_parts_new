@@ -2,94 +2,40 @@
 
 /* 回答はここに書いてね */
 
-.wrap {
-  width: 500px;
-  height: 500px;
-  background:#ecf1f2;
-  position: relative;
-}
 
-.item {
-  width: 100px;
-  height: 100px;
-  font-weight: bold;
+.contents {
+  width: 100%;
+  background: #eee;
+  padding: 20px;
+  display: table;
+  margin-bottom: 50px;
+  margin: 0 auto;
+}
+.cell {
+  display: table-cell;
+  height: 50px;
   text-align: center;
-  line-height: 100px;
-
+  vertical-align: middle;
 }
-.box1 {
-  background: #ffefd3;
-  position: absolute;
-  top: 40px;
-  left: 200px;
-  z-index: 1;
+.top__left {
+  width: 100px;
+  background: #fdc8c8;
 }
-.box2 {
-  background: #7084de;
-  position: absolute;
-  top: 120px;
-  left: 280px;
-  z-index: 2;
+.top__middle {
+  background: #e0abd9;
 }
-.box3 {
-  background: #d0ecea;
-  position: absolute;
-  top: 200px;
-  left: 360px;
-  z-index: 3;
+.top__right {
+  width: 100px;
+  background: #b6d8ed;
 }
-.box4 {
-  background: #8b7a5b;
-  position: absolute;
-  top: 280px;
-  left: 280px;
-  z-index: 4;
+.bottom__left {
+  background: #e5d32e;
 }
-.box5 {
-  background: #9fd6d2;
-  position: absolute;
-  top: 360px;
-  left: 200px;
-  z-index: 5;
+.bottom__middle {
+  background: #ec8f9a;
 }
-.box6 {
-  background: #fffee4;
-  position: absolute;
-  top: 280px;
-  left: 120px;
-  z-index: 6;
+.bottom__right {
+  width: 500px;
+  background: #8fdcad;
 }
-.box7 {
-  background: #deae70;
-  position: absolute;
-  top: 200px;
-  left: 40px;
-  z-index: 7;
-}
-.box8 {
-  background: #de70cf;
-  position: absolute;
-  top: 120px;
-  left: 120px;
-  z-index: 8;
-}
-.box9 {
-  background: #2b69a3;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.box8::after {
-  width: 20px;
-  height: 20px;
-  background: #ffefd3;
-  position: absolute;
-  top: 0px;
-  left: 80px;
-  content: '';
-  z-index: 9;
-}
-
-
-
 /* 回答はここに書いてね */

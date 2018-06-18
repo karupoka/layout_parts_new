@@ -10,10 +10,11 @@
 .container {
   background: #eff3f4;
   width: 940px;
+  height: 440px;
   padding: 20px;
 }
 .box__out {
-  float: left;
+float: left;
 background: #3274ae;
 width: 230px;
 padding: 20px;

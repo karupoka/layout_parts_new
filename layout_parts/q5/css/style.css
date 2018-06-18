@@ -2,67 +2,92 @@
 
 /* 回答はここに書いてね */
 
-.left-box {
-  text-align: center;
-}
-.left-txt {
-  background: #e6f2ff;
-  display: inline-block;
-  width: 90px;
-  padding: 10px;
-}
-.right-txt {
-  width: 90px;
-  background: #e6f2ff;
-  text-align: center;
-  margin: 0 auto;
-  padding: 10px;
-}
-.top__box {
-  display: table;
-}
-.q5__inner {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-}
-.table {
-  display: inline-block;
-  padding: 10px;
-  background: #fff;
-  border-radius: 3px;
-}
-.bottom__box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.flex{
-  background: #fff;
-  padding: 10px;
-  border-radius: 3px;
-}
-.q5__box__inner {
+.wrap {
+  width: 500px;
+  height: 500px;
+  background:#ecf1f2;
   position: relative;
 }
-.q5__box__inner--stable {
+
+.item {
+  width: 100px;
+  height: 100px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 100px;
+
+}
+.box1 {
+  background: #ffefd3;
   position: absolute;
+  top: 40px;
+  left: 200px;
+  z-index: 1;
+}
+.box2 {
+  background: #7084de;
+  position: absolute;
+  top: 120px;
+  left: 280px;
+  z-index: 2;
+}
+.box3 {
+  background: #d0ecea;
+  position: absolute;
+  top: 200px;
+  left: 360px;
+  z-index: 3;
+}
+.box4 {
+  background: #8b7a5b;
+  position: absolute;
+  top: 280px;
+  left: 280px;
+  z-index: 4;
+}
+.box5 {
+  background: #9fd6d2;
+  position: absolute;
+  top: 360px;
+  left: 200px;
+  z-index: 5;
+}
+.box6 {
+  background: #fffee4;
+  position: absolute;
+  top: 280px;
+  left: 120px;
+  z-index: 6;
+}
+.box7 {
+  background: #deae70;
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  z-index: 7;
+}
+.box8 {
+  background: #de70cf;
+  position: absolute;
+  top: 120px;
+  left: 120px;
+  z-index: 8;
+}
+.box9 {
+  background: #2b69a3;
+  position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
 }
-.q5__box__inner {
-  position: relative;
-}
-.q5__box__inner--flexible {
+.box8::after {
+  width: 20px;
+  height: 20px;
+  background: #ffefd3;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  padding: 10px;
-  margin: 0;
+  top: 0px;
+  left: 80px;
+  content: '';
+  z-index: 9;
 }
 
 
