@@ -2,4 +2,33 @@
 
 /* 回答はここに書いてね */
 
+
+
+
+.container {
+  width: 940px;
+  background: #eff3f4;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.top__box img {
+  float: left;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+p {
+  word-break:break-all;
+  font-size: 18px;
+  line-height: 22px;
+}
+.bottom__box img {
+  float: right;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+
+
+
 /* 回答はここに書いてね */

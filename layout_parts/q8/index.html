@@ -31,26 +31,26 @@
           <!-- すでについてるクラスにはstyleを指定しない。styleをつける場合は自分で新たにクラスをつけること -->
           <div class="q8 q8--btn">
             <p class="q8__title">ー small ー</p>
-            <div>common</div>
-            <div>error</div>
-            <div>disabled</div>
-            <div>shadow</div>
+            <div class="btn__small common btn">common</div>
+            <div class="btn__small error btn">error</div>
+            <div class="btn__small disabled btn">disabled</div>
+            <div class="btn__small shadow btn">shadow</div>
           </div>
 
           <div class="q8 q8--btn">
             <p class="q8__title">ー middle ー</p>
-            <div>common</div>
-            <div>error</div>
-            <div>disabled</div>
-            <div>shadow</div>
+            <div class="btn__middle common btn">common</div>
+            <div class="btn__middle error btn">error</div>
+            <div class="btn__middle disabled btn">disabled</div>
+            <div class="btn__middle shadow btn">shadow</div>
           </div>
 
           <div class="q8 q8--btn">
             <p class="q8__title">ー large ー</p>
-            <div>common</div>
-            <div>error</div>
-            <div>disabled</div>
-            <div>shadow</div>
+            <div class="btn__large common btn">common</div>
+            <div class="btn__large error btn">error</div>
+            <div class="btn__large disabled btn">disabled</div>
+            <div class="btn__large shadow btn">shadow</div>
           </div>
           <!-- 回答はここに書いてね -->
         </div>
@@ -62,32 +62,30 @@
           <!--
                Webサイトを作る際、コンタクトフォームを実装する機会がとても多くあります。
                ここで使われるタグは一般的にはデザインするのが難しいと言われていますが、それをやらないといけない状況は結構多いです。（簡単リセットされない、:focusや:activeを使う）
-               まずは元々タグにあてられているスタイルを解除して、フラットな状態にしてからスタイルを当てていくことが大事です。
+               まずはデフォルトでタグにあてられているスタイルを解除して、フラットな状態にしてからスタイルを当てていくことが大事です。
 
-               特にradioとcheckboxのチェックのスタイルが難しいと思います。
-               やり方として、既存のチェックは使わずに擬似要素でチェックのフィールドを再現します。:checkedを使えばチェックされているかどうかでスタイルを変えることができるので、これをうまく使いましょう。cssでは+（隣接セレクタ）というものも使わなくてはなりませんので、調べてみましょう。
-               また、一番下のボタンはbuttonタグを使って実装しましょう。（<input type="submit">を使って実装することも可能です）
+               radioとcheckboxのチェックのスタイルが難しいと思います。
+               やり方として、既存のチェックは使わずに擬似要素でチェックのフィールドを再現します。:checkedを使えばチェックされているかどうかであてるスタイルを変えることができるので、これをうまく使いましょう。
 
-               この課題では、実際にユーザーが入力した値を送れる状態まで作っていただきます。answerの方で確認していただきたいのですが、全ての入力フォームを適当に記述してsubmitボタンを押してみてください。URL欄の最後に「?name=...」という感じの文字列が追加されているのがわかると思います。（その?以降のものをパラメーターと呼びます。複数ある場合は?◯◯=□□&△△=××のように&繋ぎになります。◯◯や△△の部分はinputタグやselectタグのname属性が入ります。）
+               この課題では、実際にユーザーが入力した値を送れる状態まで作っていただきます。answerの方で確認していただきたいのですが、全ての入力フォームを適当に記述してsubmitボタンを押してみてください。URL欄の最後に「?q10_1=...」という感じの文字列が追加されているのがわかると思います。
                これが、入力した値を送信できている状態です。本来ではこの値をサーバーサイドで受け取ってフォームの処理をするのですが、今回はHTMLを使って送信するまでをやってもらいます。
-               answerで入力した値を自分で作ったフォームに全く同じように入力した場合、URLが全く同じように変わる状態にしてください。（formのaction属性やmethod属性が関係してきます）
+               answerで入力した値を自分で作ったフォームに全く同じように入力した場合、URLが全く同じように変わる状態にしてください。
                また赤の*(アスタリスク)の部分は必須項目です。必須項目を空にしたまま送信しようとするとアラートが表示される処理も再現しましょう。
 
                また、この問題はレイアウトが複雑なため、サイズや色の確認のためにデベロッパーツールを見ても構いません。
                ただ全ての答えを見るといったことはしないようにしましょう。
 
                ■この問題で使う大事なhtml要素
-               ・label
                ・form
                ・input(type="text")
                ・input(type="radio")
                ・input(type="checkbox")
+               ・input(type="submit")
                ・textarea
                ・select
-               ・button (inputも可能)
+               ・button
                ■この問題で使う大事なプロパティ
-               ・appearance(-webkit-appearance)
-               ・outline
+               ・-webkit-appearance
                ■この問題で使う大事な擬似要素
                ・:checked
                ・:focus
@@ -98,8 +96,66 @@
           <!-- 回答はここに書いてね -->
           <!-- すでについてるクラスにはstyleを指定しない。styleを付ける場合は自分で新たにクラスをつけること -->
           <div class="q8">
-            
-          </div>
+            <form method="get">
+              <div class="q8__form">
+                <div class="q8__form__title">Form Exercise</div>
+                <div class="clearfix">
+                  <div class="container">
+                    <div class="main">
+                      <ul class="main__items">
+                        <li class="items">
+                          <p class="left__item is__required">名前</p>
+                          <input type="text" class="right__item" name="name" required>
+                        </li>
+                        <li class="items">
+                          <p class="left__item">性別</p>
+                            <label  class="right__item">
+                              <input type="radio" name="gender" value='male'>
+                              <span>男性</span>
+                            </label>
+                            <label  class="right__item">
+                              <input type="radio" name="gender" value='female'>
+                              <span>女性</span>
+                            </label>
+                        </li>
+                        <li class="items">
+                          <p class="left__item home__list">出身</p>
+                          <select class="right__item" name="hometown">
+                            <option value="toukyo" selected>東京</option>
+                            <option value="saitama">埼玉</option>
+                            <option value="chiba">千葉</option>
+                            <option value="kanagawa">神奈川</option>
+                          </select>
+                        </li>
+                        <li class="items">
+                          <p class="left__item is__required">Eメール</p>
+                          <input type="email" class="right__item maill" placeholder="ex) hoge@gmail.com"    name="email" required>
+                        </li>
+                        <li class="items">
+                          <p class="left__item">電話番号</p>
+                          <input type="tel" class="right__item" placeholder="ex) 08012345678" name="tel">
+                        </li>
+                        <li>
+                          <div class="btn__check">
+                            <input type='checkbox' class="check__item" value="true" name='twnty' id="checkbox">
+                              <label for="checkbox" class="check__txt">20歳以上です</label>
+                          </div>
+                        </li>
+                      </ul>
+                      <div class="bottom_btn">
+                        <input type="submit" class="btn__item" value="送信">
+                      </div>
+
+                      </div>
+                    </div>
+                    <div class="side">
+                      <textarea name="massage" rows="8" cols="80" placeholder="何かあれば記入してください。"></textarea>
+                    </div>
+                  </div>
+                </div>
+             </form>
+            </div>
+
           <!-- 回答はここに書いてね -->
         </div>
       </div>

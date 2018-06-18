@@ -2,4 +2,41 @@
 
 /* 回答はここに書いてね */
 
+
+.contents {
+  width: 100%;
+  background: #eee;
+  padding: 20px;
+  display: table;
+  margin-bottom: 50px;
+  margin: 0 auto;
+}
+.cell {
+  display: table-cell;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+.top__left {
+  width: 100px;
+  background: #fdc8c8;
+}
+.top__middle {
+  background: #e0abd9;
+}
+.top__right {
+  width: 100px;
+  background: #b6d8ed;
+}
+.bottom__left {
+  width: 100px;
+  background: #e5d32e;
+}
+.bottom__middle {
+  background: #ec8f9a;
+}
+.bottom__right {
+  width: 500px;
+  background: #8fdcad;
+}
 /* 回答はここに書いてね */
