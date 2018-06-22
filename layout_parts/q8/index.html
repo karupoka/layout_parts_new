@@ -105,53 +105,68 @@
                   <div class="container">
                     <div class="main">
                       <ul class="main__items">
-                        <li class="items">
-                          <p class="left__item is__required">名前</p>
-                          <input type="text" class="right__item" name="name" required>
+                        <li class="items clearfix">
+                          <p class="items__left">名前</p>
+                          <span style="color:red">*</span>
+                          <div class="items_right">
+                            <input type="text" name="name" class="txt" required>
+                          </div>
                         </li>
-                        <li class="items">
-                          <p class="left__item">性別</p>
-                            <label  class="right__item">
-                              <input type="radio" name="gender" value='male'>
-                              <span>男性</span>
+                        <li class="items clearfix">
+                          <p class="items__left">性別</p>
+
+                          <div class="item_contents">
+                            <label class="item__radio">
+                              <input type="radio" name="gender" value="male" class="radio__btn">
+                              <span class="radio__txt1">男性</span>
                             </label>
-                            <label  class="right__item">
-                              <input type="radio" name="gender" value='female'>
-                              <span>女性</span>
+                            <label class="item__radio">
+                              <input type="radio" name="gender" value="female" class="radio__btn">
+                              <span class="radio__txt1">女性</span>
                             </label>
+
+                          </div>
+                        </li>
+                        <li class="items clearfix">
+                          <p class="items__left">出身</p>
+                          <div class="items_right" id="sita">
+                            <select name="gender" class="txt">
+                              <option value="tokyo">東京</option>
+                              <option value="saitama">埼玉</option>
+                              <option value="chiba">千葉</option>
+                              <option value="kanagawa">神奈川</option>
+                            </select>
+                          </div>
+                        </li>
+                        <li class="items clearfix">
+                          <p class="items__left">Eメール</p>
+                          <span style="color:red">*</span>
+                          <div class="items_right">
+                            <input type="text" placeholder="ex) hoge@gmail.com"  class="txt"required>
+                          </div>
+                        </li>
+                        <li class="items clearfix">
+                          <p class="items__left">電話番号</p>
+                          <div class="items_right">
+                            <input type="text" placeholder="ex) 08012345678" class="txt">
+                          </div>
                         </li>
                         <li class="items">
-                          <p class="left__item home__list">出身</p>
-                          <select class="right__item" name="hometown">
-                            <option value="toukyo" selected>東京</option>
-                            <option value="saitama">埼玉</option>
-                            <option value="chiba">千葉</option>
-                            <option value="kanagawa">神奈川</option>
-                          </select>
-                        </li>
-                        <li class="items">
-                          <p class="left__item is__required">Eメール</p>
-                          <input type="email" class="right__item maill" placeholder="ex) hoge@gmail.com"    name="email" required>
-                        </li>
-                        <li class="items">
-                          <p class="left__item">電話番号</p>
-                          <input type="tel" class="right__item" placeholder="ex) 08012345678" name="tel">
-                        </li>
-                        <li>
                           <div class="btn__check">
-                            <input type='checkbox' class="check__item" value="true" name='twnty' id="checkbox">
-                              <label for="checkbox" class="check__txt">20歳以上です</label>
+                            <label>
+                              <input type='radio' class="radio__item2" value="true" name='twnty'>
+                              <span class="radio__txt2">20歳以上です</span>
+                            </label>
                           </div>
                         </li>
                       </ul>
-                      <div class="bottom_btn">
-                        <input type="submit" class="btn__item" value="送信">
+                        <div class="bottom_btn">
+                          <input type="submit" class="btn__item" value="送信">
+                        </div>
                       </div>
-
-                      </div>
-                    </div>
-                    <div class="side">
-                      <textarea name="massage" rows="8" cols="80" placeholder="何かあれば記入してください。"></textarea>
+                     </div>
+                      <div class="side">
+                      <textarea class="massage" name="massage" rows="8" cols="80" placeholder="何かあれば記入してください。"></textarea>
                     </div>
                   </div>
                 </div>

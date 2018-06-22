@@ -2,10 +2,31 @@
 
 /* 回答はここに書いてね */
 
-select:focus , input:focus {
-  outline: 1px solid  blue;
+.items_right .txt {
+  border: none;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 5px;
+  width: 150px;
 }
-.q8__title div {
+select:focus , input:focus , .massage:focus {
+  outline: 0;
+  border : 0;
+}
+select:focus , input:focus , textarea:focus {
+  box-shadow: 0px 0px 1px 1px #00bcd4;
+}
+li {
+  list-style-type: none;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+.q8--btn {
+  text-align: center;
+}
+.q8__title .btn {
   font-size: 0;
 }
 .btn {
@@ -67,8 +88,8 @@ select:focus , input:focus {
 .q8__form__title::before {
   position: absolute;
   top: 50%;
-  left: 200px;
-  width: 500px;;
+  left: 220px;
+  width: 480px;;
   height: 1px;
   background: #ccc;
   content: '';
@@ -85,61 +106,61 @@ select:focus , input:focus {
   width: 300px;
   float: left;
 }
-.main__items {
-  float: right;
+.side {
+  float: left;
+  margin-top: 10px;
 }
-.items {
-  margin-top: 20px;
-}
-.items:first-child {
-  margin-top: 0;
-}
-.items select {
-  -webkit-appearance: none;
-  appearance : none;
-  background: #fff;
-}
-.item select::after {
-  width: 5px;
-  height: 5px;
-  border-left: 3px;
-  border-bottom: 3px;
-  background: red;
-}
-input , select {
-  border: none;
-  border-radius: 3px;
-  height: 20px;
-  line-height: 20px;
-}
-span .key {
-  width: 10px;
-  height: 10px;
-  background: #eee;
-}
-.left__item {
-  display: inline-block;
+.items__left {
+  float: left;
   width: 100px;
   text-align: right;
-  margin-right: 30px;
-  border: none;
+  line-height: 24px;
 }
-.right__item {
+.items_right {
+  float: right;
+  width: 180px;
   display: inline-block;
-  width: 150px;
 }
-label.right__item {
-  width: 60px;
+.item__radio:first-child {
+  margin-left: 20px;
 }
-.is__required::after {
-  content: '*';
-  color: red;
+input.radio__btn {
+  display: none;
 }
-textarea {
-  float: left;
+.radio__txt1 {
+  position: relative;
+  display: inline-block;
+  padding: 3px 3px 3px 20px;
+}
+.radio__txt1::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: -10px;
+  background: #fff;
+  border:  1px #ccc solid;
+  border-radius: 50%;
+  content: '';
+}
+.radio__btn:checked +
+.radio__txt1::after {
+  position: absolute;
+  top: 50%;
+  left: 4.3px;
+  width: 8px;
+  height: 8px;
+  margin-top: -6px;
+  background: #00bcd4;
+  border-radius: 50%;
+  content: '';
+}
+.massage {
+  float: right;
   box-sizing: border-box;
-  width: 300px;
-  height: 174px;
+  height: 160px;
+  width: 330px;
   padding: 10px;
   border: none;
   resize: none;
@@ -158,7 +179,7 @@ textarea {
   line-height: 30px;
 }
 .btn__check{
-
+  width: 100%;
   text-align: right;
   font-size: 15px;
   margin-top: 20px;
@@ -166,12 +187,12 @@ textarea {
 .check__item {
   display: none;
 }
-.check__txt {
+.gender__txt {
   position: relative;
   display: inline-block;
   padding-left: 24px;
 }
-.check__txt::before {
+.gender__txt::before {
   position: absolute;
   top: 50%;
   left: 0;
@@ -182,9 +203,8 @@ textarea {
   margin-top: -10px;
   content: '';
 }
-
-.check__item:checked +
-.check__txt::after {
+.gender__btn:checked +
+.gender__text::after {
   position: absolute;
   top: 50%;
   left: 3px;
@@ -195,6 +215,9 @@ textarea {
   transform: rotate(45deg);
   margin-top: -14px;
   content: '';
+}
+.gender__btn {
+  display: inline;
 }
 .bottom_btn {
   text-align: right;
@@ -212,6 +235,69 @@ textarea {
 .btn__item:active {
   background: #fff;
   color: #00bcd4;
+  box-shadow: none;
 }
-
+.items_right {
+  position: relative;
+}
+#sita::after {
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  border-left: 3px solid #eee;
+  border-bottom: 3px solid #eee;
+  border-top: transparent;
+  border-right: transparent;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 130px;
+  margin-top: -5px;
+  pointer-events: none;
+  content: '';
+}
+.radio__item2 {
+  display: none;
+}
+.radio__txt2 {
+  position: relative;
+  display: inline-block;
+  padding: 3px 3px 3px 20px;
+}
+.radio__txt2::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -11px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 1px solid #ccc;
+  content: '';
+}
+.radio__item2:checked +
+.radio__txt2::after {
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  margin-top: -18px;
+  box-sizing: border-box;
+  width: 10px;
+  height: 22px;
+  border-right: 4px #00bcd4 solid;
+  border-bottom: 4px #00bcd4 solid;
+  transform: rotate(45deg);
+  content: '';
+}
+.btn__check label {
+  margin-right: 30px;
+}
+.bottom_btn .btn__item {
+  margin-right: 30px;
+}
+.items_right select {
+  background: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+}
 /* 回答はここに書いてね */

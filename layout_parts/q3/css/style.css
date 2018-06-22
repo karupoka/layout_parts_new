@@ -1,13 +1,11 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
-
-
-table {
+.is-table {
   width: 100%;
   margin: 0 auto;
 }
-th {
+.is-th {
   background: #2244aa;
   color: #fff;
   padding: 10px;
@@ -15,23 +13,23 @@ th {
   border-right: 1px solid #dedede;
   text-align: center;
 }
-th:first-child {
+.is-th:first-child {
   border-right: 1px solid #dedede;
 }
-td {
+.is-td {
   padding: 10px;
   border-top: 1px solid #dedede;
   border-right: 1px solid #dedede;
   text-align: center;
 }
-td:first-child {
+.is-td:first-child {
   border-left: 1px solid #dedede;
 }
-tbody tr:last-child {
+.tbody-main .is-tr:last-child {
   border-top: 2px dashed #000;
   border-bottom: 1px solid #dedede;
 }
-tbody tr:nth-child(2n){
+.tbody-main .is-tr:nth-child(2n){
   background: #ecf1f2;
 }
 

@@ -14,13 +14,11 @@
 .wrap::after {
   width: 20px;
   height: 20px;
-  border-top: 5px transparent solid;
-  border-left: 5px transparent solid;
   border-right: 5px #222 solid;
   border-bottom: 5px #222 solid;
   background: #fff;
   position: absolute;
-  top: 137px;
+  top: 250px;
   left: 40px;
   content: '';
   transform: rotate(45deg);
