@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
-img {
+.contents__item img {
   display:block;
   transition: all 0.5s;
 }

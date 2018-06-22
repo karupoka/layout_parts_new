@@ -2,8 +2,8 @@
 
 /* 回答はここに書いてね */
 
-body{
-  width:100%;
+body {
+  width: 100%;
 }
 .clearfix::after {
   content: '';
@@ -62,11 +62,11 @@ body{
 .is-full {
   font-size: 0;
 }
-.full__item1{
+.txt__wrap1{
   display: inline-block;
   vertical-align: top;
 }
-.full__item2 {
+.txt__wrap2 {
   display: inline-block;
   margin-left: -300px;
   padding-left: 350px;
